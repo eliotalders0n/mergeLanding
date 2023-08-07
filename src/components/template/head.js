@@ -9,16 +9,17 @@ function Head(props) {
         style={{ backgroundColor: "white" }}
       >
         <Navbar.Brand href="/" className="mx-auto">
-          <h1>
+          {/* <h1>
             <span style={{ color: "black", fontSize: "7vh" }}>Merge</span>
-          </h1>
+          </h1> */}
+          <img src="images/merge.jpg" style={{ width: "10vh", borderRadius: "10px"}} alt="merge thing"/>
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Col md={2}>
             <Nav.Link
               href="https://mergesocial.web.app/"
-              style={{ fontSize: "4vh", textDecoration: "underline", textDecorationColor: "cyan" }}
+              style={{ fontSize: "3vh" }}
             >
               Login
             </Nav.Link>
@@ -26,7 +27,7 @@ function Head(props) {
           <Col md={2}>
             <Nav.Link
               href="#location"
-              style={{ fontSize: "4vh", textDecoration: "underline", textDecorationColor: "cyan" }}
+              style={{ fontSize: " 3vh"  }}
             >
               Location
             </Nav.Link>
@@ -34,7 +35,7 @@ function Head(props) {
           <Col md={2}>
             <Nav.Link
               href="#contact"
-              style={{ fontSize: "4vh", textDecoration: "underline", textDecorationColor: "cyan" }}
+              style={{ fontSize: " 3vh"  }}
             >
               Contact
             </Nav.Link>
@@ -42,7 +43,7 @@ function Head(props) {
           <Col md={2}>
             <Nav.Link
               href="#about"
-              style={{ fontSize: "4vh", textDecoration: "underline", textDecorationColor: "cyan"}}
+              style={{ fontSize: " 3vh" }}
             >
               About
             </Nav.Link>

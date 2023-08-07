@@ -4,7 +4,7 @@ import Footer from "./template/footer";
 import { Container, Col, Row, Carousel, Card, Button } from "react-bootstrap";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
-import { InstagramEmbed } from "react-social-media-embed";
+// import { InstagramEmbed } from "react-social-media-embed";
 
 function Home(props) {
   return (
@@ -50,18 +50,34 @@ function Home(props) {
                 </span>{" "}
                 AND PREPARING TO FACE LIFES CHALLENGES
               </p>
-              <Button>Join Now</Button>{" "}
-              <Button className="btn-dark">Location</Button>
+              <Button>
+                <a
+                  href="https://mergesocial.web.app/"
+                  style={{ color: "white", textDecoration: "none" }}
+                >
+                  Join Now
+                </a>
+              </Button>{" "}
+              <Button className="btn-dark">
+                {" "}
+                <a
+                  href="#location"
+                  style={{ color: "white", textDecoration: "none" }}
+                >
+                  Location
+                </a>
+              </Button>
             </Col>
             {/*  */}
             <Col className="my-4" style={{ position: "relative" }}>
               <img
+                alt="An important location"
                 style={{
                   maxWidth: "100%",
-                  borderRadius: "40px",
+                  borderRadius: "20px",
                   boxShadow: "4px 4px 8px 2px rgba(128, 0, 128, 0.2)",
                 }}
-                src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                src="images/340680332_596755138836910_6972884149751450555_n.jpg"
               />
               <div
                 style={{
@@ -76,13 +92,10 @@ function Home(props) {
                   borderRadius: "10px 20px 10px",
                 }}
               >
-                <h4>
-                  Merge is all about high energy, deep relationships and great
-                  exploits
-                </h4>
                 <br />
               </div>
-              <h5
+              <p
+                className="lead"
                 style={{
                   backgroundColor: "rgba(0,255,255, 0.2)",
                   color: "black",
@@ -93,19 +106,23 @@ function Home(props) {
                 }}
               >
                 Designed specifically for unmarried young adults age 19 to 29
-              </h5>
+              </p>
             </Col>
           </Row>
         </Container>
 
         <Container>
-        <Row>
+          <h1 className="display-1">
+            Merge is all about high energy, deep relationships and great
+            exploits
+          </h1>
+          <Row>
             <Col className="my-5">
               <Carousel controls={false} indicators={false}>
-                <Carousel.Item style={{height : "50vh"}}>
+                <Carousel.Item style={{ height: "50vh" }}>
                   <img
                     className="d-block w-100"
-                    src="http://mlfc.org/wp-content/uploads/2022/06/Merge-1.jpg"
+                    src="images/360023132_1022338938942698_8952576746658833123_n.jpg"
                     alt="First slide"
                   />
                   <Carousel.Caption>
@@ -121,10 +138,10 @@ function Home(props) {
                     </p>
                   </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item style={{height : "50vh"}}>
+                <Carousel.Item style={{ height: "50vh" }}>
                   <img
                     className="d-block w-100"
-                    src="http://mlfc.org/wp-content/uploads/2022/06/Merge-2.jpg"
+                    src="images/360037010_1333835704150826_2700217713084517867_n.jpg"
                     alt="Second slide"
                   />
 
@@ -142,10 +159,10 @@ function Home(props) {
                     </p>
                   </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item style={{height : "50vh"}}>
+                <Carousel.Item style={{ height: "50vh" }}>
                   <img
                     className="d-block w-100"
-                    src="http://mlfc.org/wp-content/uploads/2022/06/Merge-3.jpg"
+                    src="images/360111681_1020465039269992_8305628719381089766_n.jpg"
                     alt="Third slide"
                   />
 
@@ -168,14 +185,34 @@ function Home(props) {
         </Container>
 
         <Container id="about" fluid>
+          <h1 className="display-1">
+            Set your boundaries and love others as you love yourself.
+          </h1>
+          <span
+            className="lead"
+            style={{
+              backgroundColor: "rgba(180,100,205,0.6)",
+              color: "white",
+              padding: "1px",
+              fontSize: "3rem",
+              textShadow: "8px 2px 6px rgba(0, 0, 0, 0.4)",
+            }}
+          >
+            #wearemerge
+          </span>
           <Row>
             <Col>
               <Card
-                style={{ maxWidth: "35rem", border: "none", marginTop: "70px", boxShadow: "14px 14px 2px 2px rgba(0,160,160,0.2)" }}
+                style={{
+                  maxWidth: "35rem",
+                  border: "none",
+                  marginTop: "150px",
+                  boxShadow: "14px 14px 2px 2px rgba(0,160,160,0.2)",
+                }}
               >
                 <Card.Img
                   variant="top"
-                  src="https://images.unsplash.com/photo-1514471269849-fda3a4441307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                  src="images/340479027_1385777255490374_8822995076195551715_n.jpg"
                 />
                 <Card.Body>
                   <Card.Title className="display-3">
@@ -214,12 +251,16 @@ function Home(props) {
 
             <Col>
               <Card
-                style={{ maxWidth: "40rem", border: "none", boxShadow: "14px 14px 2px 2px rgba(50,0,255,0.2)" }}
+                style={{
+                  maxWidth: "40rem",
+                  border: "none",
+                  boxShadow: "14px 14px 2px 2px rgba(50,0,255,0.2)",
+                }}
                 className="my-5"
               >
                 <Card.Img
                   variant="top"
-                  src="https://images.unsplash.com/photo-1520642413789-2bd6770d59e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                  src="images/340339949_962071961633103_2193017506266044603_n.jpg"
                 />
                 <Card.Body>
                   <Card.Title className="display-5">
@@ -247,21 +288,17 @@ function Home(props) {
         <Container fluid>
           <Row style={{ paddingTop: "100px" }}>
             <Col className="my-5">
-              <div style={{ display: "flex", justifyContent: "center" }}>
-                <InstagramEmbed
-                  url="https://www.instagram.com/p/Cr-1dbkIoOP/"
-                  width={"40vh"}
-                />
-              </div>
+              <h4 className="display-5">
+                On merge social, join your fellow mergers and commnicate as a
+                group.<br/><br/> This platform is centered around the small groups and
+                seeks to enhance that experience. <br/><br/>Login and share your thoughts
+                with your fellow group members that no one else can see or peek
+                into other peoples thoughts on the public feed.{" "}
+              </h4>
             </Col>
 
             <Col className="my-5">
-              <div style={{ display: "flex", justifyContent: "center" }}>
-                <InstagramEmbed
-                  url="https://www.instagram.com/p/CoWgI1Do6-e/"
-                  width={"40vh"}
-                />
-              </div>
+              <img style={{width: "40vh", margin: "5vh 5vh"}} src="images/Screenshot 2023-08-07 033852.jpg" alt="side center"/>
             </Col>
           </Row>
         </Container>
@@ -297,7 +334,10 @@ function Home(props) {
                   <h4 className="text-center">
                     Miracle Life Family Church (MERGE HQ)
                   </h4>
-                  <img src="http://mlfc.org/wp-content/uploads/2022/10/Home-1.jpg" />
+                  <img
+                    alt="Another important location"
+                    src="http://mlfc.org/wp-content/uploads/2022/10/Home-1.jpg"
+                  />
                 </Popup>
               </Marker>
             </MapContainer>
